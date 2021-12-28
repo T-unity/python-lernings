@@ -1,10 +1,11 @@
 # coding: UTF-8
+TAX_RATE = 1.1
 
-def get_tri(base=5, height=5):
-  return base * height / 2
+def total_price(*values):
+  res = 1
+  for value in values:
+    res += value
 
-print(get_tri())
-print('-----')
-print(get_tri(10))
-print('-----')
-print(get_tri(10,10))
+  return res * TAX_RATE
+
+print(total_price(2000, 1000, 3500, 2200))
