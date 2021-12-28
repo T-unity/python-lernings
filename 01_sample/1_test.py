@@ -1,14 +1,10 @@
 # coding: UTF-8
 
-context = 'グローバル'
+def get_tri(base=5, height=5):
+  return base * height / 2
 
-def check_scope_parent():
-  context = '親の関数'
-
-  def check_scope_child():
-    # context = '子の関数'
-    return context
-
-  return check_scope_child()
-
-print(check_scope_parent())
+print(get_tri())
+print('-----')
+print(get_tri(10))
+print('-----')
+print(get_tri(10,10))
