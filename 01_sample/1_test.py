@@ -1,3 +1,5 @@
+# coding: UTF-8
+
 name = 'T-unity'
 print(name)
 
@@ -13,3 +15,9 @@ def get_area(base, height):
 
 area = get_area(5, 10)
 print(area)
+
+def only_return_text(content):
+  content = content
+  print(content)
+
+only_return_text('めしがうまい')
