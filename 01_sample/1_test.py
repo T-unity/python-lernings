@@ -1,13 +1,10 @@
 # coding: UTF-8
 TAX_RATE = 1.1
 
-def create_dict(**kwargs):
-  res = dict()
-  for key , value in kwargs.items():
-    res[key] = value
+def get_max_min(*args):
+  return max(args), min(args)
 
-  return res
+max_val, min_val = get_max_min(100,231,0.5, -500, 114514)
 
-d = create_dict(name='its me', age=20, gender=1, address='JP')
-
-print(d)
+print(max_val)
+print(min_val)
