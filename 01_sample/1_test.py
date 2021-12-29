@@ -1,9 +1,11 @@
 # coding: UTF-8
 TAX_RATE = 1.1
 
-def name(prefix, suffix, *args):
-  res = prefix
-  res += '・'.join(args)
-  return res + suffix
+def total_price(init, *values):
+  res = init
+  for value in values:
+    res += value
 
-print(name('鈴木', '一郎', 'middle1', 'middle2'))
+  return res
+
+print(total_price(1000, 1000, 1000))
