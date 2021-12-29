@@ -1,12 +1,15 @@
 # coding: UTF-8
 
-def high_level_func(get_data, pass_value_func):
+def high_func(get_data, pass_func):
   for key, value in enumerate(get_data):
-    pass_value_func(value, key)
+    pass_func(value, key)
 
-def entity_func(value, key):
-  print(key, 's value is', value, '.')
+result = 0
+def add_func(value, key):
+  global result
+  result += value
 
-set_data = [12,55,36,74,342,554,2,432,4]
+origin = [98, 21,72, 55, 102]
 
-high_level_func(set_data, entity_func)
+high_func(origin, add_func)
+print(result)
