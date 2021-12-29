@@ -1,11 +1,13 @@
 # coding: UTF-8
 TAX_RATE = 1.1
 
-def total_price(init, *values):
-  res = init
-  for value in values:
-    res += value
+def create_dict(**kwargs):
+  res = dict()
+  for key , value in kwargs.items():
+    res[key] = value
 
   return res
 
-print(total_price(1000, 1000, 1000))
+d = create_dict(name='its me', age=20, gender=1, address='JP')
+
+print(d)
