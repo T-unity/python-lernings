@@ -1,10 +1,12 @@
 # coding: UTF-8
-TAX_RATE = 1.1
 
-def get_max_min(*args):
-  return max(args), min(args)
+def high_level_func(get_data, pass_value_func):
+  for key, value in enumerate(get_data):
+    pass_value_func(value, key)
 
-max_val, min_val = get_max_min(100,231,0.5, -500, 114514)
+def entity_func(value, key):
+  print(key, 's value is', value, '.')
 
-print(max_val)
-print(min_val)
+set_data = [12,55,36,74,342,554,2,432,4]
+
+high_level_func(set_data, entity_func)
