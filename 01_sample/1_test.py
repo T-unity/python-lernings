@@ -13,3 +13,15 @@ origin = [98, 21,72, 55, 102]
 
 high_func(origin, add_func)
 print(result)
+
+
+def hello_dolly(data, some_func):
+  for key, value in enumerate(data):
+    some_func(key, value)
+
+def print_func(key, value):
+  print(key, value)
+
+original = ['hello','goodbye','see you','morning','hi','yep',]
+
+hello_dolly(original, print_func)
