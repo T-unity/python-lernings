@@ -1,27 +1,18 @@
 # coding: UTF-8
 
-def high_func(get_data, pass_func):
-  for key, value in enumerate(get_data):
-    pass_func(value, key)
+def log_func(some):
+  def inner(*args, **kwargs):
+    print('デコレーターを利用しない高階関数')
+    print('------------------')
+    print(f'Name: {some.__name__}')
+    print(f'Args: {args}')
+    print(f'keywords: {kwargs}')
+    print('------------------')
+    return some(*args, **kwargs)
+  return inner
 
-result = 0
-def add_func(value, key):
-  global result
-  result += value
+def setter(x, y, m='bar', n='piyo'):
+  print(f'setter: {x}-{y}/{m}-{n}')
 
-origin = [98, 21,72, 55, 102]
-
-high_func(origin, add_func)
-print(result)
-
-
-def hello_dolly(data, some_func):
-  for key, value in enumerate(data):
-    some_func(key, value)
-
-def print_func(key, value):
-  print(key, value)
-
-original = ['hello','goodbye','see you','morning','hi','yep',]
-
-hello_dolly(original, print_func)
+log_setter = log_func(setter)
+log_setter(2021,12, m='hello', n='world')
