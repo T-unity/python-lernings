@@ -15,3 +15,6 @@ if __name__ == '__main__':
 
   noname = Person()
   print(noname.firstname, noname.lastname)
+
+  taro.age = 18
+  print(taro.age)
