@@ -1,16 +1,10 @@
 class Person:
-  __slots__ = ['firstname', 'lastname', 'age']
-  def __init__(self, firstname='some', lastname='one'):
-    # firstname = self.firstname
-    self.firstname = firstname
-    self.lastname = lastname
-
-  def show_own(self):
-    print(f'私の名前は{self.firstname}{self.lastname}です。')
-
+  @classmethod
+  def return_name(cls, name):
+    return name
 
 if __name__ == '__main__':
+  print(Person.return_name('きよし'))
 
-  taro = Person('山田', '太郎')
-
-  taro.show_own()
+  p = Person()
+  print(p.return_name('あべし'))
