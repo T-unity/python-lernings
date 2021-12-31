@@ -5,14 +5,12 @@ class Person:
     self.firstname = firstname
     self.lastname = lastname
 
+  def show_own(self):
+    print(f'私の名前は{self.firstname}{self.lastname}です。')
+
 
 if __name__ == '__main__':
 
   taro = Person('山田', '太郎')
-  print(taro.firstname, taro.lastname)
 
-  taro.age = 18
-  print(taro.age)
-
-  taro.height = 178
-  print(taro.height)
+  taro.show_own()
